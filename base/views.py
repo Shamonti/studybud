@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.db.models import Q
@@ -21,13 +22,15 @@ def loginRoom(request):
         try:
             user = User.objects.get(username=username)
         except:
-            return HttpResponse('No user found')
+            messages.error(request, 'User does not exist')
         
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
             login(request, user)
-            return render(request, 'base/home.html')
+            return redirect('home')
+        else:
+            messages.error(request, 'Username or Password does not exist.')
 
     context = {}
     return render(request, 'base/login_register.html', context)

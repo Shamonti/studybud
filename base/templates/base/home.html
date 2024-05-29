@@ -1,4 +1,6 @@
-{% extends 'main.html' %} {% block content %}
+{% extends 'main.html' %} 
+
+{% block content %}
 
 <style>
   .home-container {
@@ -13,11 +15,13 @@
     <hr />
 
     <a href="{% url 'home' %}">All</a>
+
     {% for topic in topics %}
     <div>
       <a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}}</a>
     </div>
     {% endfor %}
+
   </div>
 
   <div>
@@ -25,6 +29,7 @@
     <a href="{% url 'create-room' %}">Create Room</a>
 
     <div>
+
       {% for room in rooms %}
       <div>
         <a href="{% url 'update-room' room.id %}">Edit</a>
@@ -36,8 +41,10 @@
         <small>{{room.topic.name}}</small>
         <hr />
       </div>
-
-      {%endfor%} {% endblock %}
+      {%endfor%} 
+      
+      
     </div>
   </div>
 </div>
+{% endblock %}
