@@ -1,3 +1,6 @@
 {
-  "tasks.autoDetect": "on"
+  "tasks.autoDetect": "on",
+  "cSpell.words": [
+    "endfor"
+  ]
 }
