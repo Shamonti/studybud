@@ -21,13 +21,10 @@
         <div class="layout__body">
           <form class="form" action="" method='POST'>
             {% csrf_token %}
-
-
             <div class="form__group">
-              <label for="room_topic">Room Topic</label>
+              <label for="room_topic">Enter a Topic</label>
               {% comment %} <input id="room_name" name="room_name" type="text" placeholder="E.g. Mastering Python + Django" /> {% endcomment %}
-              
-              <input type="text" name='topic' list='topic-list'>
+              <input type="text" name='topic' value='{{room.topic.name}}' list='topic-list' required>
               <datalist id='topic-list'>
                 <select name="room_topic" id="room_topic">
                   {% for topic in topics %}
@@ -67,7 +64,7 @@
             </div> {% endcomment %}
             <div class="form__action">
               <a class="btn btn--dark" href="{% url "home" %}">Cancel</a>
-              <button class="btn btn--main" type="submit">Create Room</button>
+              <button class="btn btn--main" type="submit">Submit</button>
             </div>
           </form>
         </div>
