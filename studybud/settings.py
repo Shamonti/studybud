@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'studybud.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-{} # Prevent Django from loading an adapter
+    'default': {}
 }
 
 
