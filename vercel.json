@@ -23,5 +23,6 @@
         "src": "/(.*)",
         "dest": "studybud/wsgi.py"
       }
-    ]
+    ],
+    "outputDirectory": "staticfiles"
   }
