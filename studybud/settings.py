@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%f$)h*&m5lj1=t*#l8a5j9l8m1550gf6&v0_)v*tj_8ezqjerp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -79,10 +79,7 @@ WSGI_APPLICATION = 'studybud.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+{} # Prevent Django from loading an adapter
 }
 
 
