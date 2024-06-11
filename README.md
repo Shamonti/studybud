@@ -9,7 +9,8 @@
 ## Install
 
 ```sh
-git clone https://github.com/Shamonti/studybud.gitcd studybud
+git clone https://github.com/Shamonti/studybud.git
+cd studybud
 pip install -r requirements.txt`python manage.py runserver
 ```
 
