@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@appnest/readme": "^1.2.7",
     "prettier-plugin-django-alpine": "^1.2.6"
   }
 }
